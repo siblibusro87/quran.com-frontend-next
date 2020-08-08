@@ -10,6 +10,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { configureStore, getDefaultMiddleware, combineReducers } from '@reduxjs/toolkit';
+import isClient from 'src/utils/isClient';
 import quranReaderStyles from './slices/QuranReader/styles';
 import readingView from './slices/QuranReader/readingView';
 
@@ -26,6 +27,16 @@ const rootReducer = combineReducers({
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+const additionalMiddlewares = [];
+
+if (isClient) {
+  import('@giantmachines/redux-websocket').then((module) => {
+    const reduxWebsocket = module.default;
+    const reduxWebsocketMiddleware = reduxWebsocket();
+    additionalMiddlewares.push(reduxWebsocketMiddleware);
+  });
+}
 
 const store = configureStore({
   reducer: persistedReducer,
