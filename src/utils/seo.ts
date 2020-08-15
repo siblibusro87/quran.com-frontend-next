@@ -4,8 +4,8 @@ import { theme } from './styles';
 
 export const config = {
   siteName: "Al-Qur'an al-Kareem - القرآن الكريم",
-  siteDescription: 'The Quran translated into many languages in a simple and easy interface',
-  defaultPageTitle: 'sholawat.net - Kumpulan puja puji ',
+  siteDescription: 'Al Quran Online, kumpulan sholawat terlengkap dan doa doa!  ',
+  defaultPageTitle: 'Sholawat.net - Kumpulan puja puji ',
   baseUrl: 'twitter.com',
   websiteLogo: logo,
   twitterHandle: '@twitter',
@@ -29,7 +29,7 @@ export function createSEOConfig({
   return {
     title: seoTitle,
     description: setDescription,
-    titleTemplate: '%s - sholawat.net',
+    titleTemplate: '%s - Sholawat.net',
     openGraph: {
       type: 'website',
       locale: 'en_US', // TODO: (@abdellatif): adjust this based on the next-translate locale
