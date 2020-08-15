@@ -5,7 +5,7 @@ import { theme } from './styles';
 export const config = {
   siteName: "Al-Qur'an al-Kareem - القرآن الكريم",
   siteDescription: 'The Quran translated into many languages in a simple and easy interface',
-  defaultPageTitle: 'Quran.com',
+  defaultPageTitle: 'sholawat.net - Kumpulan puja puji ',
   baseUrl: 'twitter.com',
   websiteLogo: logo,
   twitterHandle: '@twitter',
