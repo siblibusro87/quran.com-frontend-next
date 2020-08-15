@@ -4,7 +4,7 @@ const range = require('lodash/range');
 const chapters = range(1, 115);
 
 sitemap({
-  baseUrl: 'https://quran.com',
+  baseUrl: 'https://Sholawat.net',
   ignoredPaths: ['/[chapterId]'],
   extraPaths: chapters.map((id) => `/${id}`),
   pagesDirectory: `${__dirname}/src/pages`,
