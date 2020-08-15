@@ -29,7 +29,7 @@ export function createSEOConfig({
   return {
     title: seoTitle,
     description: setDescription,
-    titleTemplate: '%s - Quran.com',
+    titleTemplate: '%s - sholawat.net',
     openGraph: {
       type: 'website',
       locale: 'en_US', // TODO: (@abdellatif): adjust this based on the next-translate locale
